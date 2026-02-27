@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HappyHouseDecor</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Montserrat', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f9fafc;
+    color:#333;
+}
+
+/* HEADER */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:white;
+    box-shadow:0 3px 10px rgba(0,0,0,0.05);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:50px;
+}
+
+.logo h2{
+    font-weight:700;
+    color:#ff4fa3;
+}
+
+nav a{
+    margin:0 20px;
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ff4fa3;
+}
+
+.btn-primary{
+    background:linear-gradient(45deg,#ff4fa3,#5ac8fa);
+    color:white;
+    padding:10px 20px;
+    border-radius:30px;
+    text-decoration:none;
+}
+
+/* HERO */
+.hero{
+    height:600px;
+    background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    position:relative;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.5);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    animation:fadeIn 1.5s ease;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    margin-bottom:30px;
+}
+
+section{
+    padding:100px 8%;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:60px;
+    font-size:32px;
+}
+
+/* ABOUT */
+.about{
+    display:flex;
+    gap:50px;
+    flex-wrap:wrap;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    max-width:500px;
+    border-radius:20px;
+}
+
+.about-text{
+    flex:1;
+}
+
+/* PRODUCTS */
+.products-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:40px;
+}
+
+.product{
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+    transition:0.4s;
+    text-align:center;
+}
+
+.product:hover{
+    transform:translateY(-10px);
+}
+
+.product img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+.price{
+    color:#ff4fa3;
+    font-weight:600;
+    margin:10px 0;
+}
+
+/* BANNER */
+.promo{
+    background:linear-gradient(45deg,#ff4fa3,#5ac8fa);
+    color:white;
+    text-align:center;
+    border-radius:30px;
+    padding:60px 20px;
+}
+
+/* TESTIMONIAL */
+.testimonials{
+    text-align:center;
+}
+
+.testimonial{
+    max-width:600px;
+    margin:30px auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* NEWSLETTER */
+.newsletter{
+    text-align:center;
+}
+
+.newsletter input{
+    padding:12px;
+    width:250px;
+    border-radius:30px;
+    border:1px solid #ccc;
+}
+
+.newsletter button{
+    padding:12px 20px;
+    border:none;
+    border-radius:30px;
+    background:#ff4fa3;
+    color:white;
+    cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+    background:#222;
+    color:white;
+    padding:40px 8%;
+    text-align:center;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+@media(max-width:768px){
+    .hero h1{
+        font-size:30px;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="logo">
+        <h2>HappyHouseDecor</h2>
+    </div>
+
+    <nav>
+        <a href="#">Trang chủ</a>
+        <a href="#about">Giới thiệu</a>
+        <a href="#products">Sản phẩm</a>
+        <a href="#contact">Liên hệ</a>
+    </nav>
+
+    <a href="#" class="btn-primary">Mua ngay</a>
+</header>
+
+<div class="hero">
+    <div class="hero-content">
+        <h1>Trang Trí Không Gian – Nâng Tầm Cảm Xúc</h1>
+        <p>Thiết kế hiện đại • Chất lượng cao cấp • Giá hợp lý</p>
+        <a href="#products" class="btn-primary">Khám phá ngay</a>
+    </div>
+</div>
+
+<section id="about">
+    <h2>Câu chuyện thương hiệu</h2>
+    <div class="about">
+        <img src="https://images.unsplash.com/photo-1560448075-bb485b067938">
+        <div class="about-text">
+            <p>
+                HappyHouseDecor ra đời với sứ mệnh mang đến những sản phẩm trang trí 
+                tinh tế và hiện đại. Chúng tôi tin rằng mỗi không gian sống đều 
+                xứng đáng được chăm chút để trở thành nơi truyền cảm hứng mỗi ngày.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="products">
+    <h2>Sản phẩm nổi bật</h2>
+    <div class="products-grid">
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1582582494700-7b74e8c9c89d">
+            <h3>Đèn Vintage</h3>
+            <div class="price">450.000đ</div>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1615873968403-89e068629265">
+            <h3>Gương nghệ thuật</h3>
+            <div class="price">1.200.000đ</div>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d">
+            <h3>Tranh treo tường</h3>
+            <div class="price">780.000đ</div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="promo">
+        <h2>Giảm 20% cho đơn hàng đầu tiên</h2>
+        <p>Đăng ký email để nhận ưu đãi ngay hôm nay!</p>
+    </div>
+</section>
+
+<section class="testimonials">
+    <h2>Khách hàng nói gì?</h2>
+    <div class="testimonial">
+        "Sản phẩm đẹp hơn mong đợi, đóng gói rất cẩn thận!"
+        <br><br>
+        <strong>- Lan Anh, TP.HCM</strong>
+    </div>
+</section>
+
+<section class="newsletter" id="contact">
+    <h2>Đăng ký nhận tin</h2>
+    <input type="email" placeholder="Nhập email của bạn">
+    <button>Đăng ký</button>
+</section>
+
+<footer>
+    © 2026 HappyHouseDecor | Thiết kế bởi Sinh viên xuất sắc 😎
+</footer>
+
+</body>
+</html>
